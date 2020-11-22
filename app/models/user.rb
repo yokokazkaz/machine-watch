@@ -14,3 +14,4 @@ class User < ApplicationRecord
           validates :first_name, format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, allow_blank: true }
          end
 end
+
