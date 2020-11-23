@@ -1,5 +1,4 @@
 class MachinesController < ApplicationController
-  
   def index
     @machines = Machine.all.order('created_at DESC').includes(:user)
   end
@@ -8,19 +7,18 @@ class MachinesController < ApplicationController
     @machine = Machine.new
   end
 
-def create
-  @machine = Machine.new(machine_params)
+  def create
+    @machine = Machine.new(machine_params)
     if @machine.save
       redirect_to root_path
     else
       render :new
     end
-end
+  end
 
-private
+  private
 
-def machine_params
-  params.require(:machine).permit(:name, :detail, :image).merge(user_id: current_user.id)
-end
-
+  def machine_params
+    params.require(:machine).permit(:name, :detail, :image).merge(user_id: current_user.id)
+  end
 end
