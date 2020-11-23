@@ -7,7 +7,7 @@
         <li class="user-nickname"><%= current_user.nickname %> </li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
         <% if current_user.id == 1 %>
-          <li><%= link_to '新規マシン登録', "#", class: "new-machine" %> </li>
+          <li><%= link_to '新規マシン登録', "/machines/new", class: "new-machine" %> </li>
         <%end%>
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
