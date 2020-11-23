@@ -1,6 +1,7 @@
 class MachinesController < ApplicationController
   
   def index
+    @machines = Machine.all.order('created_at DESC').includes(:user)
   end
 
   def new
@@ -23,4 +24,3 @@ def machine_params
 end
 
 end
-  
