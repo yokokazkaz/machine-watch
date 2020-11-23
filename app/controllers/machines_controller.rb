@@ -16,6 +16,9 @@ class MachinesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def machine_params
