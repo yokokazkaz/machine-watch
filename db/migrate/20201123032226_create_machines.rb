@@ -3,8 +3,10 @@ class CreateMachines < ActiveRecord::Migration[6.0]
     create_table :machines do |t|
       t.string     :name,              null: false
       t.text       :detail,            null: false
-      # t.references :user,              null: false, foreign_key: true
+      t.boolean    :checked
+      t.references :user,              null: false, foreign_key: true
       t.timestamps
     end
   end
 end
+
