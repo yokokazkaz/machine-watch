@@ -13,4 +13,7 @@ class User < ApplicationRecord
     validates :last_name, format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, allow_blank: true }
     validates :first_name, format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, allow_blank: true }
   end
+
+  has_many :machines
+  # has_many :reservations
 end
