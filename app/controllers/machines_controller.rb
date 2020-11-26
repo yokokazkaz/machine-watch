@@ -1,11 +1,13 @@
 class MachinesController < ApplicationController
   before_action :machine_find, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @machines = Machine.all.order('created_at DESC').includes(:user)
   end
 
   def new
+    redirect_to root_path if current_user.id != 1 
     @machine = Machine.new
   end
 
