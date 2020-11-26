@@ -7,7 +7,7 @@ class MachinesController < ApplicationController
   end
 
   def new
-    redirect_to root_path if current_user.id != 1 
+    redirect_to root_path if current_user.id != 1
     @machine = Machine.new
   end
 
@@ -24,7 +24,7 @@ class MachinesController < ApplicationController
   end
 
   def edit
-    redirect_to root_path if current_user.id != 1 
+    redirect_to root_path if current_user.id != 1
   end
 
   def update
