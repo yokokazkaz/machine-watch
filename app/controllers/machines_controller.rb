@@ -1,4 +1,6 @@
 class MachinesController < ApplicationController
+  before_action :machine_find, only: [:show, :edit, :update, :destroy]
+
   def index
     @machines = Machine.all.order('created_at DESC').includes(:user)
   end
@@ -17,16 +19,18 @@ class MachinesController < ApplicationController
   end
 
   def show
-    @machine = Machine.find(params[:id])
   end
 
-def edit
-  @machine = Machine.find(params[:id])
-end
+  def edit
+  end
 
   private
 
   def machine_params
     params.require(:machine).permit(:name, :detail, :image).merge(user_id: current_user.id)
+  end
+
+  def machine_find
+    @machine = Machine.find(params[:id])
   end
 end
