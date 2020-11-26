@@ -1,9 +1,13 @@
 class MachinesController < ApplicationController
+  before_action :machine_find, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
+
   def index
     @machines = Machine.all.order('created_at DESC').includes(:user)
   end
 
   def new
+    redirect_to root_path if current_user.id != 1
     @machine = Machine.new
   end
 
@@ -17,12 +21,27 @@ class MachinesController < ApplicationController
   end
 
   def show
-    @machine = Machine.find(params[:id])
+  end
+
+  def edit
+    redirect_to root_path if current_user.id != 1
+  end
+
+  def update
+    if @machine.update(machine_params)
+      redirect_to machine_path
+    else
+      render :edit
+    end
   end
 
   private
 
   def machine_params
     params.require(:machine).permit(:name, :detail, :image).merge(user_id: current_user.id)
+  end
+
+  def machine_find
+    @machine = Machine.find(params[:id])
   end
 end
