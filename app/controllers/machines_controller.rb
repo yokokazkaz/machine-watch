@@ -20,6 +20,10 @@ class MachinesController < ApplicationController
     @machine = Machine.find(params[:id])
   end
 
+def edit
+  @machine = Machine.find(params[:id])
+end
+
   private
 
   def machine_params
