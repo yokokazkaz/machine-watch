@@ -24,6 +24,14 @@ class MachinesController < ApplicationController
   def edit
   end
 
+  def update
+    if @machine.update(machine_params)
+      redirect_to machine_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def machine_params
