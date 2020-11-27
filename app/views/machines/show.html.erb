@@ -18,7 +18,6 @@
     <% if user_signed_in? %>
       <% if current_user.id == 1 %>
         <%= link_to '情報の編集', edit_machine_path(@machine.id), method: :get, class: "item-red-btn" %>
-        <p class='or-text'>or</p>
         <%= link_to '削除', machine_path(@machine.id), method: :delete, class:'item-destroy' %>
       <% end %>
       <%# <% if @machine.reservation.blank? %> 
