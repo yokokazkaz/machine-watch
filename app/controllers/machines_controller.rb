@@ -36,8 +36,8 @@ class MachinesController < ApplicationController
   end
 
   def destroy
-    if current_user.id == @item.user_id
-        @item.destroy
+    if current_user.id == 1
+        @machine  .destroy
         redirect_to root_path
     end
   end
