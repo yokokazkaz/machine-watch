@@ -35,6 +35,13 @@ class MachinesController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user.id == 1
+      @machine .destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
   def machine_params
