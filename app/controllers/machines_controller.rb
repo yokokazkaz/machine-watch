@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-  before_action :machine_find, only: [:show, :edit, :update, :destroy]
+  before_action :machine_find, only: [:show, :edit, :update, :destroy, :checked]
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
@@ -40,6 +40,17 @@ class MachinesController < ApplicationController
       @machine .destroy
       redirect_to root_path
     end
+  end
+
+  def checked
+    if @machine.checked 
+      @machine.update(checked: false)
+    else
+      @machine.update(checked: true)
+    end
+
+    item = Machine.find(params[:id])
+    render json: { machine: item }
   end
 
   private
