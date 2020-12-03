@@ -310,17 +310,23 @@ a {
 
 /* //商品一覧 */
 
-.status-detail{
-  text-align: center;
+.status-blue-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+  color: darkblue;
+}
+.status-red-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+  color: red;
 }
 
-.post{
-  background-color: skyblue;
+.status {
+  background: darkblue;
 }
-.mashine-status-btn{
-  background-color: lightgreen;
-  margin-top: 20px;
-}
+
 
 div[data-check="true"] {
   background: red;

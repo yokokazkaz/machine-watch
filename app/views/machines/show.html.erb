@@ -14,6 +14,12 @@
       <%# </div> %>
       <%# //商品が売れている場合は、sold outを表示しましょう %>
     </div>
+    <div>
+      利用状況 
+      <span class='status-blue-text'>空</span>  <span class='status-red-text'>満</span>
+    </div>
+    <div class="post" data-id=<%= @machine.id %> data-check=<%= @machine.checked %>>
+    </div>
 
     <% if user_signed_in? %>
       <% if current_user.id == 1 %>

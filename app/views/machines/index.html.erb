@@ -123,13 +123,13 @@
           </h3>
         </div>
         <% end %>
-        <div class="post" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
-          <h2 class="status-detail">Not In Use</h2>
-          <h2 class="status-detail">00:00</h2>
+        利用状況 
+        <span class='status-blue-text'>空</span>
+        <span class='status-red-text'>満</span>
+        <div class="status">
         </div>
-        <%# <div class="mashine-status-btn">
-          <h2 class="status-detail">切り替え</h2>
-        </div> %>
+          <div class="post" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
+          </div>
       </li>
     <% end %>
   </div>
