@@ -126,10 +126,9 @@
         利用状況 
         <span class='status-blue-text'>空</span>
         <span class='status-red-text'>満</span>
-        <div class="status">
+        <div class="machine-use" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
+          <h2 class="use-time">00:00</h2>
         </div>
-          <div class="post" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
-          </div>
       </li>
     <% end %>
   </div>

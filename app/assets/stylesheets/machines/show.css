@@ -205,14 +205,6 @@
   font-size: 23px;
 }
 
-.post {
-  text-align: center;
-  background-color: skyblue;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
-}
 
 
 div[data-check="true"] {

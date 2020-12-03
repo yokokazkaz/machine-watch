@@ -1,6 +1,6 @@
 function check() {
 
-  const posts = document.querySelectorAll(".post");
+  const posts = document.querySelectorAll(".machine-use");
   posts.forEach(function (post) {
     if (post.getAttribute("data-load") != null) {
       return null;
