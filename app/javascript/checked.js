@@ -9,7 +9,7 @@ function check() {
     post.addEventListener("click", () => {
       const machineId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
-      XHR.open("GET", `/machines/${machineId}`, true);
+      XHR.open("GET", `/machine/${machineId}`, true);
       XHR.responseType = "json";
       XHR.send();
 
