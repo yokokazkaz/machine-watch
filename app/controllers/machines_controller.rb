@@ -43,15 +43,17 @@ class MachinesController < ApplicationController
   end
 
   def checked
-    machine = Machine.find(params[:id])
-    if machine.checked 
-      machine.update(checked: false)
-    else
-      machine.update(checked: true)
-    end
+    if current_user.id == 1
+      machine = Machine.find(params[:id])
+      if machine.checked 
+        machine.update(checked: false)
+      else
+        machine.update(checked: true)
+      end
 
-    item = Machine.find(params[:id])
-    render json: { machine: item }
+      item = Machine.find(params[:id])
+      render json: { machine: item }
+    end
   end
 
   private
