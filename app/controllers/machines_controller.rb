@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-  before_action :machine_find, only: [:show, :edit, :update, :destroy, :checked]
+  before_action :machine_find, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
@@ -43,10 +43,11 @@ class MachinesController < ApplicationController
   end
 
   def checked
-    if @machine.checked 
-      @machine.update(checked: false)
+    machine = Machine.find(params[:id])
+    if machine.checked 
+      machine.update(checked: false)
     else
-      @machine.update(checked: true)
+      machine.update(checked: true)
     end
 
     item = Machine.find(params[:id])
@@ -56,7 +57,7 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit(:name, :detail, :image).merge(user_id: current_user.id)
+    params.require(:machine).permit(:name, :detail, :checked, :image).merge(user_id: current_user.id)
   end
 
   def machine_find

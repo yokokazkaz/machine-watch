@@ -314,10 +314,14 @@ a {
   text-align: center;
 }
 
-.status{
+.post{
   background-color: skyblue;
 }
 .mashine-status-btn{
   background-color: lightgreen;
   margin-top: 20px;
+}
+
+div[data-check="true"] {
+  background: red;
 }
