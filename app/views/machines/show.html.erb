@@ -14,7 +14,10 @@
       <%# </div> %>
       <%# //商品が売れている場合は、sold outを表示しましょう %>
     </div>
-
+    <h2 class="name">
+      利用終了予定時刻　<%= @machine.time %>
+    </h2>
+    
     <% if user_signed_in? %>
       <% if current_user.id == 1 %>
         <%= link_to '情報の編集', edit_machine_path(@machine.id), method: :get, class: "item-red-btn" %>
