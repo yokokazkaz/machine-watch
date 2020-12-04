@@ -326,6 +326,8 @@ a {
 .machine-use{
   background: darkblue;
   text-align: center;
+  color: #fff;
+  font-weight: bold
 
 }
 
@@ -334,7 +336,3 @@ div[data-check="true"] {
   background: red;
 }
 
-.use-time{
-  color: #fff;
-  font-weight: bold;
-}
