@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_034028) do
   create_table "machines", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name", null: false
     t.text "detail", null: false
+    t.string "time"
     t.boolean "checked"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
