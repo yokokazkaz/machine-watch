@@ -59,7 +59,7 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit(:name, :detail, :time, :checked, :image).merge(user_id: current_user.id)
+    params.require(:machine).permit(:name, :detail, :status_id, :time, :checked, :image).merge(user_id: current_user.id)
   end
 
   def machine_find
