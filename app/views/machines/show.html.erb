@@ -14,11 +14,24 @@
       <%# </div> %>
       <%# //商品が売れている場合は、sold outを表示しましょう %>
     </div>
-    <% unless @machine.time.blank? %>  
-      <h2 class="name">
-        利用終了予定時刻　<%= @machine.time %>
-      </h2>
-    <% end %>
+        <div class="machine-use-status">
+          利用状況
+        </div>
+        <div class='status-btn'>
+          <% if @machine.status_id == 1 %>
+            <span class='status-blue-text'>空</span>
+          <% else %>
+            <span class='status-red-text'>満</span>
+          <% end %>
+        </div>
+        
+        <% if @machine.status_id == 2 %>  
+          <div class='item-info'>
+            <h3 class='item-name'>
+             利用終了予定時刻　<%= @machine.time %>
+            </h3>
+          </div>
+        <% end %>
     
     <% if user_signed_in? %>
       <% if current_user.id == 1 %>
