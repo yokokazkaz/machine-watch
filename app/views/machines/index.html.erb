@@ -123,6 +123,11 @@
           </h3>
         </div>
         <% end %>
+      <% if user_signed_in? && current_user.id == 1 %>
+        <div class="status-change">
+          <%= link_to '情報の編集', edit_machine_path(machine.id), method: :get, class: "status-change-btn"%>
+        </div>
+      <% end %>
         <div class="machine-use-status">
           利用状況
         </div>
