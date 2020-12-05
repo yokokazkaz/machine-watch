@@ -123,12 +123,24 @@
           </h3>
         </div>
         <% end %>
-        <div class="machine-use" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
-          <h2>利用状況</h2>
+        <div class="machine-use-status" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
+          利用状況
         </div>
-        利用状況 
-        <span class='status-blue-text'>空</span>
-        <span class='status-red-text'>満</span>
+        <div class='status-btn'>
+          <% if machine.checked == false %>
+            <span class='status-blue-text'>空</span>
+          <% else %>
+            <span class='status-red-text'>満</span>
+          <% end %>
+        </div>
+        
+        <% unless machine.time.blank? %>  
+          <div class='item-info'>
+            <h3 class='item-name'>
+             利用終了予定時刻　<%= machine.time %>
+            </h3>
+          </div>
+        <% end %>
       </li>
     <% end %>
   </div>
