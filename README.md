@@ -22,12 +22,14 @@
 | ---------------- | ---------- | ------------------------------ |
 | name             | string     | null: false                    |
 | detail           | text       | null: false                    |
-| checked          | boolean    |                                |
+| status_id        | integer    | null: false                    |
+| time             | string     |                                |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- belongs_to_active_hash :status_id
 - has_one    :reservation
 
 
