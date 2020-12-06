@@ -123,21 +123,26 @@
           </h3>
         </div>
         <% end %>
-        <div class="machine-use-status" data-id=<%= machine.id %> data-check=<%= machine.checked %>>
+      <% if user_signed_in? && current_user.id == 1 %>
+        <div class="status-change">
+          <%= link_to '情報の編集', edit_machine_path(machine.id), method: :get, class: "status-change-btn"%>
+        </div>
+      <% end %>
+        <div class="machine-use-status">
           利用状況
         </div>
         <div class='status-btn'>
-          <% if machine.checked == false %>
+          <% if machine.status_id == 1 %>
             <span class='status-blue-text'>空</span>
           <% else %>
             <span class='status-red-text'>満</span>
           <% end %>
         </div>
         
-        <% unless machine.time.blank? %>  
-          <div class='item-info'>
-            <h3 class='item-name'>
-             利用終了予定時刻　<%= machine.time %>
+        <% if machine.status_id == 2 %>  
+          <div class='time-info'>
+            <h3 class='time-name'>
+             終了予定時刻　<%= machine.time %>
             </h3>
           </div>
         <% end %>

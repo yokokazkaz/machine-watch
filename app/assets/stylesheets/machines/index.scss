@@ -247,6 +247,7 @@ a {
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
+  margin: 0 auto;
   background-color: #FFF;
 }
 
@@ -283,6 +284,17 @@ a {
 }
 
 .item-name {
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.time-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.time-name {
   font-size: 2.5vh;
 }
 
@@ -332,6 +344,18 @@ a {
   color: black;
   font-weight: bold
 
+}
+
+.status-change{
+  text-align: center;
+  background-color:greenyellow;
+  
+}
+
+.status-change-btn{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;  
 }
 
 

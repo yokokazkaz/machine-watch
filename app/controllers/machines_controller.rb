@@ -29,7 +29,7 @@ class MachinesController < ApplicationController
 
   def update
     if @machine.update(machine_params)
-      redirect_to machine_path
+      redirect_to root_path
     else
       render :edit
     end
@@ -42,24 +42,10 @@ class MachinesController < ApplicationController
     end
   end
 
-  def checked
-    if current_user.id == 1
-      machine = Machine.find(params[:id])
-      if machine.checked 
-        machine.update(checked: false)
-      else
-        machine.update(checked: true)
-      end
-
-      item = Machine.find(params[:id])
-      render json: { machine: item }
-    end
-  end
-
   private
 
   def machine_params
-    params.require(:machine).permit(:name, :detail, :time, :checked, :image).merge(user_id: current_user.id)
+    params.require(:machine).permit(:name, :detail, :status_id, :time, :checked, :image).merge(user_id: current_user.id)
   end
 
   def machine_find
