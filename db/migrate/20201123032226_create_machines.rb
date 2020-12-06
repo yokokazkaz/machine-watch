@@ -4,8 +4,7 @@ class CreateMachines < ActiveRecord::Migration[6.0]
       t.string     :name,              null: false
       t.text       :detail,            null: false
       t.integer    :status_id,         null: false
-      t.string     :time
-      t.boolean    :checked
+      t.string     :time,              null: false
       t.references :user,              null: false, foreign_key: true
       t.timestamps
     end
