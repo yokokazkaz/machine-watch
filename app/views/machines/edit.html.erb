@@ -41,7 +41,7 @@ app/assets/stylesheets/items/new.css %>
       <div class="weight-bold-text">
         利用終了予定時刻
       </div>
-      <%= f.text_area :time, class:"items-text", id:"item-name", value:"初期値テスト" %>
+      <%= f.text_area :time, class:"items-text", id:"item-name", value: (Time.now + 1200).strftime('%H:%M') %>
 
       <div class="items-explain">
         <div class="weight-bold-text">

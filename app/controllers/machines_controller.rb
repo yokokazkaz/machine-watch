@@ -29,7 +29,7 @@ class MachinesController < ApplicationController
 
   def update
     if @machine.update(machine_params)
-      redirect_to machine_path
+      redirect_to root_path
     else
       render :edit
     end
