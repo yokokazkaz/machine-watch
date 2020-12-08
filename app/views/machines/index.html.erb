@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <%# 画面上部の帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
       もうトレーニングで待たなくていい
@@ -13,47 +13,47 @@
       リアルタイムでお知らせします
     </p>
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+  <%# /画面上部の帯部分  %>
 
-  <%# FURIMAが選ばれる3つの理由部分 %>
-  <div class='select-reason-contents'>
+  <%# MaSeenを使う3つのSTEP部分 %>
+  <div class='use-step-contents'>
     <h2 class='title'>
       MaSeenを使う3つのSTEP
     </h2>
-    <ul class='reason-lists'>
+    <ul class='step-lists'>
       <li class='list'>
         <%= image_tag "step01.jpg", class:"list-pict" %>
-        <span class='reason-list-number'>1</span>
-        <h3 class='reason-list-text'>
+        <span class='step-list-number'>1</span>
+        <h3 class='step-list-text'>
           空き情報チェック
         </h3>
-        <p class='reason-list-description'>
+        <p class='step-list-description'>
           使いたいマシンの空き情報をチェック＆予約
         </p>
       </li>
       <li class='list'>
         <%= image_tag "step02.jpg", class:"list-pict" %>
-        <span class='reason-list-number'>2</span>
-        <h3 class='reason-list-text'>
+        <span class='step-list-number'>2</span>
+        <h3 class='step-list-text'>
           時間に合わせてジムへ
         </h3>
-        <p class='reason-list-description'>
+        <p class='step-list-description'>
           マシンが空く時間に合わせてジムへGO！！
         </p>
       </li>
       <li class='list'>
         <%= image_tag "step03.jpg", class:"list-pict" %>
-        <span class='reason-list-number'>3</span>
-        <h3 class='reason-list-text'>
+        <span class='step-list-number'>3</span>
+        <h3 class='step-list-text'>
           筋トレスタート！
         </h3>
-        <p class='reason-list-description'>
+        <p class='step-list-description'>
           待ち時間ゼロで筋トレ！
         </p>
       </li>
     </ul>
   </div>
-  <%# /FURIMAが選ばれる3つの理由部分 %>
+  <%# MaSeenを使う3つのSTEP部分 %>
 
   <%# マシン一覧 %>
   <div class='item-contents'>
@@ -65,13 +65,6 @@
         <%= link_to machine_path(machine.id), method: :get do %>
         <div class='item-img-content'>
           <%= image_tag machine.image, class: "item-img" %>
-
-          <%# 商品が売れていればsold outを表示しましょう %>
-          <%# <div class='sold-out'> %>
-            <%# <span>Use In!!</span> %>
-          <%# </div> %>
-          <%# //商品が売れていればsold outを表示しましょう %>
-
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
@@ -97,7 +90,7 @@
         
         <% if machine.status_id == 2 %>  
           <div class='time-info'>
-            <h3 class='time-name'>
+            <h3 class='time-text'>
              終了予定時刻　<%= machine.time %>
             </h3>
           </div>
