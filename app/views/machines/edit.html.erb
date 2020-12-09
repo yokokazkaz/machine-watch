@@ -12,6 +12,7 @@ app/assets/stylesheets/items/new.css %>
     <%= render 'shared/error_messages', model: f.object %>
 
     <%# マシン画像 %>
+    <% if user_signed_in? && current_user.id == 1 %>
     <div class="img-upload">
       <div class="weight-bold-text">
         マシン画像
@@ -24,15 +25,17 @@ app/assets/stylesheets/items/new.css %>
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
+    <% end %>
     <%# /マシン画像 %>
 
     <%# マシン名とマシン詳細 %>
     <div class="new-items">
+    <% if user_signed_in? && current_user.id == 1 %>
       <div class="weight-bold-text">
         マシン名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"マシン名（必須 40文字まで)", maxlength:"40" %>
 
       <div class="weight-bold-text">
         マシンの空き状況
@@ -51,6 +54,12 @@ app/assets/stylesheets/items/new.css %>
         </div>
         <%= f.text_area :detail, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
       </div>
+      <% end %>
+
+      <div class="weight-bold-text">
+        予約者
+      </div>
+      <%= f.text_area :subscriber, class:"items-text",  placeholder:"氏名を入力（40文字まで)", maxlength:"40" %>
     </div>
     <%# /マシン名とマシン詳細 %>
 

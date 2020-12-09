@@ -30,6 +30,9 @@
             <h3 class='item-name'>
              利用終了予定時刻　<%= @machine.time %>
             </h3>
+            <h3 class='time-text'>
+             次回予約者　<%= @machine.subscriber %>
+            </h3>
           </div>
         <% end %>
     
@@ -38,9 +41,9 @@
         <%= link_to '情報の編集', edit_machine_path(@machine.id), method: :get, class: "item-red-btn" %>
         <%= link_to '削除', machine_path(@machine.id), method: :delete, class:'item-destroy' %>
       <% end %>
-      <%# <% if @machine.reservation.blank? %> 
-        <%= link_to '予約画面に進む', "#" ,class:"item-red-btn"%>
-      <%# <% end %> 
+      <% if @machine.status_id == 2 && @machine.subscriber.blank?%>
+          <%= link_to '予約画面に進む', edit_machine_path(@machine.id), method: :get, class:"item-red-btn" %>
+      <% end %> 
     <% end %>
     <%# //マシンが予約されていない場合はこちらを表示しましょう %>
 

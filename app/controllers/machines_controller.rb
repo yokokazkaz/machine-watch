@@ -24,7 +24,6 @@ class MachinesController < ApplicationController
   end
 
   def edit
-    redirect_to root_path if current_user.id != 1
   end
 
   def update
