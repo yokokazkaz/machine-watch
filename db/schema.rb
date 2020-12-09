@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_034028) do
     t.text "detail", null: false
     t.integer "status_id", null: false
     t.string "time"
+    t.string "subscriber"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
