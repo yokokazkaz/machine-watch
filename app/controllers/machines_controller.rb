@@ -24,7 +24,6 @@ class MachinesController < ApplicationController
   end
 
   def edit
-    redirect_to root_path if current_user.id != 1
   end
 
   def update
@@ -45,7 +44,7 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit(:name, :detail, :status_id, :time, :checked, :image).merge(user_id: current_user.id)
+    params.require(:machine).permit(:name, :detail, :status_id, :time, :subscriber, :checked, :image).merge(user_id: current_user.id)
   end
 
   def machine_find

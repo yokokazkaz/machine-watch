@@ -14,7 +14,6 @@
 ### Association
 
 - has_many :machines
-- has_many :reservations
 
 ## machine テーブル
 
@@ -24,23 +23,10 @@
 | detail           | text       | null: false                    |
 | status_id        | integer    | null: false                    |
 | time             | string     |                                |
+| subscriber       | string     |                                |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to_active_hash :status_id
-- has_one    :reservation
-
-
-## reservation テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| machine | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :machine

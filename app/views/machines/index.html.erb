@@ -93,6 +93,15 @@
             <h3 class='time-text'>
              終了予定時刻　<%= machine.time %>
             </h3>
+            <% unless machine.subscriber.blank? %> 
+              <h3 class='time-text'>
+              次回予約者　<%= machine.subscriber %>
+              </h3>
+            <% else %>
+              <h3 class='time-text'>
+              次回予約者無し
+              </h3>
+            <% end %>
           </div>
         <% end %>
       </li>
