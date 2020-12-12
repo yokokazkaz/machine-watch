@@ -5,14 +5,14 @@
 ・フィットネスジムにある目当てのマシンの利用状況がリアルタイムでわかる  
 ・使いたいマシンの利用を予約してジムに向かうことができる
 
-#### URL
+### URL
 https://machine-watch.herokuapp.com/
 
-#### Basic認証
+### Basic認証
 ID:yokokazkaz  
 PASS:050607ky
 
-#### テストユーザー
+### テストユーザー
 **スタッフユーザー**  
 アドレス:yokokaz@yokokaz.com  
 PASS:050607ky  
