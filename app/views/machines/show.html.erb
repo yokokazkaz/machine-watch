@@ -47,8 +47,13 @@
         <%= link_to '情報の編集', edit_machine_path(@machine.id), method: :get, class: "item-red-btn" %>
         <%= link_to '削除', machine_path(@machine.id), method: :delete, class:'item-destroy' %>
       <% end %>
-      <% if @machine.status_id == 2 && @machine.subscriber.blank?%>
+      <% if current_user.id != 1 && @machine.status_id == 2 %>
+        <% if @machine.subscriber.blank? %>
           <%= link_to '予約画面に進む', edit_machine_path(@machine.id), method: :get, class:"item-red-btn" %>
+        <% end %>
+        <% if @machine.subscriber.present? && @machine.subscriber == current_user.nickname %>
+          <%= link_to '予約を取り消す', edit_machine_path(@machine.id), method: :get, class:"item-red-btn" %>
+        <% end %>
       <% end %> 
     <% end %>
     <%# //マシンが予約されていない場合はこちらを表示しましょう %>
