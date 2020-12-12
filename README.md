@@ -9,7 +9,7 @@
 https://machine-watch.herokuapp.com/
 
 #### Basic認証
-ID:yokokazkaz
+ID:yokokazkaz  
 PASS:050607ky
 
 ## テーブル設計
