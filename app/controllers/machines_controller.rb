@@ -24,6 +24,9 @@ class MachinesController < ApplicationController
   end
 
   def edit
+    unless current_user.id == 1 || @machine.subscriber.blank?
+      redirect_to root_path
+    end
   end
 
   def update
