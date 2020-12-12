@@ -1,13 +1,13 @@
 # アプリ名：MaSeen
 
-# MaSeenの概要
-### 「トレーニングを始めたいのに待つ」というストレスを解消する
-フィットネスジムにある目当てのマシンの利用状況がリアルタイムでわかる  
-使いたいマシンの利用を予約してジムに向かうことができる
+## MaSeenの概要
+#### 「トレーニングを始めたいのに待つ」というストレスを解消する
+・フィットネスジムにある目当てのマシンの利用状況がリアルタイムでわかる  
+・使いたいマシンの利用を予約してジムに向かうことができる
 
-# テーブル設計
+## テーブル設計
 
-## user テーブル
+### user テーブル
 
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
@@ -18,11 +18,11 @@
 | first_name         | string | null: false               |
 
 
-### Association
+#### Association
 
 - has_many :machines
 
-## machine テーブル
+### machine テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
@@ -33,7 +33,7 @@
 | subscriber       | string     |                                |
 | user             | references | null: false, foreign_key: true |
 
-### Association
+#### Association
 
 - belongs_to :user
 - belongs_to_active_hash :status_id
