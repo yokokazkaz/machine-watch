@@ -24,7 +24,7 @@ class MachinesController < ApplicationController
   end
 
   def edit
-    if (current_user.id != 1 && @machine.status_id == 1) || (current_user.id == 2 && @machine.subscriber.present? && @machine.subscriber != current_user.nickname)
+    if (current_user.id != 1 && @machine.status_id == 1) || (current_user.id != 1 && @machine.subscriber.present? && @machine.subscriber != current_user.nickname)
       redirect_to root_path 
     end
   end
