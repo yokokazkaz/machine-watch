@@ -105,6 +105,16 @@
   resize: none;
 }
 
+.items-text-delete{
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  display: none;
+}
+
 .items-explain {
   margin-top: 2vh;
 }

@@ -1,5 +1,5 @@
-<%# cssは商品出品のものを併用しています。
-app/assets/stylesheets/items/new.css %>
+<%# cssは新規マシン登録のものを併用しています。
+app/assets/stylesheets/machines/new.css %>
 
 <div class="new-items-contents">
   <header class="new-items-header">
@@ -62,10 +62,14 @@ app/assets/stylesheets/items/new.css %>
       <% end %>
 
       <% if user_signed_in? && current_user.id != 1 %>
-        <div class="weight-bold-text">
-          予約者
-        </div>
-        <%= f.text_area :subscriber, class:"items-text",  value: current_user.nickname, maxlength:"40" %>
+        <% if @machine.subscriber.blank? %>
+          <div class="weight-bold-text">
+            予約者
+          </div>
+          <%= f.text_area :subscriber, class:"items-text",  value: current_user.nickname, maxlength:"40" %>
+        <% elsif @machine.subscriber.present? && @machine.subscriber == current_user.nickname %>
+          <%= f.text_area :subscriber, class:"items-text-delete",  value: "", maxlength:"40" %>
+        <% end %>
       <% end %>
     </div>
 
@@ -80,10 +84,17 @@ app/assets/stylesheets/items/new.css %>
     <% end %>
 
     <% if user_signed_in? && current_user.id != 1 %>
-      <div class="sell-btn-contents">
-        <%= f.submit "予約する" ,class:"sell-btn" %>
-        <%=link_to 'もどる', root_path, method: :get, class:"back-btn" %>
-      </div>
+      <% if @machine.subscriber != current_user.nickname %>
+        <div class="sell-btn-contents">
+          <%= f.submit "予約する" ,class:"sell-btn" %>
+          <%=link_to 'もどる', root_path, method: :get, class:"back-btn" %>
+        </div>
+        <% elsif @machine.subscriber == current_user.nickname %>
+        <div class="sell-btn-contents">
+          <%= f.submit "予約を取り消す" ,class:"sell-btn" %>
+          <%=link_to 'もどる', root_path, method: :get, class:"back-btn" %>
+        </div>
+      <% end %>
     <% end %>
     <%# /下部ボタン %>
   </div>
