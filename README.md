@@ -89,3 +89,5 @@ PASS:123456ky
 
 - belongs_to :user
 - belongs_to_active_hash :status_id
+
+## ローカルでの動作方法
