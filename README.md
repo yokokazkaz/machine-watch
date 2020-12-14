@@ -65,7 +65,7 @@ PASS:123456ky
 マシンの利用者が利用を終了したら「満」→「空」へ切り替え  
   
 
-![一般ユーザーDEMO](https://gyazo.com/f900338f36eee0ade84040c71b26309f/row)  
+[![Image from Gyazo](https://i.gyazo.com/f900338f36eee0ade84040c71b26309f.gif)](https://gyazo.com/f900338f36eee0ade84040c71b26309f)  
 
 ## 目指した課題解決
 **ペルソナ**  
