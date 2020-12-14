@@ -49,7 +49,7 @@ PASS:123456ky
 「予約画面に進む」をクリックし、次の「予約する」をクリック  
 ※自分でした予約を取り消すことも可能  
   
-https://i.gyazo.com/80312fa5d6ae7bebea6a8bb41dc80811.mp4
+![demo]https://i.gyazo.com/80312fa5d6ae7bebea6a8bb41dc80811.mp4
   
 ### スタッフユーザー
 **①マシンの新規登録**  
