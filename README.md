@@ -1,4 +1,4 @@
-[![Image from Gyazo](https://i.gyazo.com/3d2e3f617520f28f043d3e337c7e0703.gif)](https://gyazo.com/3d2e3f617520f28f043d3e337c7e0703)
+[Image from Gyazo](https://i.gyazo.com/3d2e3f617520f28f043d3e337c7e0703.gif)](https://gyazo.com/3d2e3f617520f28f043d3e337c7e0703)
 
 # アプリ名：MaSeen(読み：マシーン)
 
