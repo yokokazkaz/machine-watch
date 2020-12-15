@@ -25,7 +25,7 @@ PASS:123456ky
 アドレス:bbb@bbb.com  
 PASS:123456ky
 
-## MaSeenの利用方法  
+## MaSeen(マシーン)の利用方法  
   
 ### 一般ユーザー
 **①：ログイン**  
@@ -100,6 +100,10 @@ PASS:123456ky
 
 
 ## データベース設計
+
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/931958d3638a6ed7dfa1821029d564f9.png)](https://gyazo.com/931958d3638a6ed7dfa1821029d564f9)
+
 
 ### user テーブル
 
