@@ -93,7 +93,7 @@ PASS:123456ky
 ●解決する機能  
 マシンが空く時間を確認し、次の利用をWEBで予約できる機能
 
-## 要件定義
+## 機能の要件定義
 
 
 
@@ -136,4 +136,8 @@ PASS:123456ky
 - belongs_to :user
 - belongs_to_active_hash :status_id
 
-## ローカルでの動作方法
+## バージョン・パッケージ
+
+[![Image from Gyazo](https://i.gyazo.com/bf57e48b751c34f959fdc3f6c0bc0d24.png)](https://gyazo.com/bf57e48b751c34f959fdc3f6c0bc0d24)  
+  
+[![Image from Gyazo](https://i.gyazo.com/306fca19b947c97820121f866bf6eabd.png)](https://gyazo.com/306fca19b947c97820121f866bf6eabd)
