@@ -1,4 +1,6 @@
-# アプリ名：MaSeen
+[![Image from Gyazo](https://i.gyazo.com/3d2e3f617520f28f043d3e337c7e0703.gif)](https://gyazo.com/3d2e3f617520f28f043d3e337c7e0703)
+
+# アプリ名：MaSeen(読み：マシーン)
 
 ## MaSeenの概要
 #### 「トレーニングを待たされる」というストレスを解消するアプリ
@@ -25,7 +27,7 @@ PASS:123456ky
 アドレス:bbb@bbb.com  
 PASS:123456ky
 
-## MaSeen(マシーン)の利用方法  
+## MaSeenの利用方法  
   
 ### 一般ユーザー
 **①：ログイン**  
