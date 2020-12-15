@@ -1,4 +1,4 @@
-https://github.com/yokokazkaz/machine-watch/issues/20#issue-767433075
+![maseen-top](https://user-images.githubusercontent.com/71754586/102206230-9c0ba400-3f0f-11eb-9b11-43990a1ba87e.gif)
 
 # アプリ名：MaSeen(読み：マシーン)
 
