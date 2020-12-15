@@ -1,4 +1,4 @@
-![demo](https://gyazo.com/3d2e3f617520f28f043d3e337c7e0703/raw)
+https://github.com/yokokazkaz/machine-watch/issues/20#issue-767433075
 
 # アプリ名：MaSeen(読み：マシーン)
 
